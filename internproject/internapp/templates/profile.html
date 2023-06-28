@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static '/css/profile.css' %}">
+</head>
+<body>
+  <form method="post" action="{% url 'profiledata' %}">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="order_date">Email</label>
+      <input class="text" type="email" name="email" id="email" placeholder="email" required>
+    </div>
+    <div class="form-group">
+      <label for="order_date">Order Date:</label>
+      <input class="text" type="date" name="order_date" id="order_date" placeholder="order_date" required>
+    </div>
+    <div class="form-group">
+      <label for="company">Company:</label>
+      <input class="text" type="text" name="company" id="company" placeholder="company" required>
+    </div>
+    <div class="form-group">
+      <label for="owner">Owner:</label>
+      <input class="email" type="text" name="owner" id="owner" placeholder="owner" required>
+    </div>
+    <div class="form-group">
+      <label for="item">Item:</label>
+      <input class="text" type="text" name="item" id="item" placeholder="item" required>
+    </div>
+    <div class="form-group">
+      <label for="quantity">Quantity:</label>
+      <input class="text" type="number" name="quantity" id="quantity" placeholder="quantity" required>
+    </div>
+    <div class="form-group">
+      <label for="weight">Weight:</label>
+      <input class="text" type="number" name="weight" id="weight" placeholder="weight" required>
+    </div>
+    <div class="form-group">
+      <label for="request_for_shipment">Request for Shipment:</label>
+      <input class="text" type="text" name="request_for_shipment" id="request_for_shipment" placeholder="request_for_shipment" required>
+    </div>
+    <div class="form-group">
+      <label for="tracking_id">Tracking ID:</label>
+      <input class="text" type="text" name="tracking_id" id="tracking_id" placeholder="tracking_id" required>
+    </div>
+    <div class="form-group">
+      <label for="shipment_size">Shipment Size:</label>
+      <input class="text" type="text" name="shipment_size" id="shipment_size" placeholder="LL*BB*HH" required>
+    </div>
+    <div class="form-group">
+      <label for="box_count">Box Count:</label>
+      <input class="text" type="number" name="box_count" id="box_count" placeholder="box_count" required>
+    </div>
+    <div class="form-group">
+      <label for="specification">Specification:</label>
+      <input class="text" type="text" name="specification" id="specification" placeholder="specification" required>
+    </div>
+    <div class="form-group">
+      <label for="checklist_quantity">Checklist Quantity:</label>
+      <input class="text" type="text" name="checklist_quantity" id="checklist_quantity" placeholder="checklist_quantity" required>
+    </div>
+    <div class="form-group">
+      <input class="submit-button" type="submit" value="Submit">
+    </div>
+  </form>
+</body>
+</html>
